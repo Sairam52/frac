@@ -1,0 +1,43 @@
+working
+#include <stdio.h>
+#include <math.h>
+int it()
+{
+int ans,gcd,lcm,num1,num2,num3,num4,lar;
+printf("enter numerator 1 : ");
+scanf("%d",&num1);
+printf("enter denominator 1 : ");
+scanf("%d",&num3);
+printf("enter numerator 2 : ");
+scanf("%d",&num2);
+printf("enter denominator 2 : ");
+scanf("%d",&num4);
+for(int i=1;i<=num1 && i<=num2;i++)
+{
+  gcd=i;
+}
+lcm=(num3*num4)/gcd;
+printf("The gcd : %d\n",gcd);
+printf("The lcm : %d\n",lcm);
+if((num3%num4==0)&&(num3>num4))
+{
+  lar=lcm/num4;
+  ans=num1*lar+num2;
+}
+if((num4%num3==0)&&(num3<num4))
+{
+  lar=lcm/num3;
+  ans=num2*lar+num1;
+}
+if(num3%num4!=0)
+ ans=num1*num4+num2*num3;
+ printf("The ans is : %d/%d",ans,lcm);
+}
+int main()
+{
+ it();
+ return 0;
+}
+ 
+ 
+
