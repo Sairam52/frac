@@ -1,4 +1,3 @@
-working
 #include <stdio.h>
 #include <math.h>
 int it()
@@ -17,8 +16,6 @@ for(int i=1;i<=num1 && i<=num2;i++)
   gcd=i;
 }
 lcm=(num3*num4)/gcd;
-printf("The gcd : %d\n",gcd);
-printf("The lcm : %d\n",lcm);
 if((num3%num4==0)&&(num3>num4))
 {
   lar=lcm/num4;
@@ -30,14 +27,20 @@ if((num4%num3==0)&&(num3<num4))
   ans=num2*lar+num1;
 }
 if(num3%num4!=0)
- ans=num1*num4+num2*num3;
- printf("The ans is : %d/%d",ans,lcm);
+  ans=num1*num4+num2*num3;
+int x=0;
+for(int i=1;i<=lar;i++)
+  {
+    if((ans%i==0)&&(lcm%i==0))
+      x=i;
+  }
+int ans1,lcm1;
+ans1=ans/x;
+lcm1=lcm/x;
+printf("The ans is : %d/%d",ans1,lcm1);
 }
 int main()
 {
  it();
  return 0;
 }
- 
- 
-
